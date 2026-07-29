@@ -1,15 +1,15 @@
 ---
 import "../styles/global.css";
+
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
-
-const description =
-  "Estudio de grabación profesional especializado en grabación, mezcla y mastering.";
+const { title, description = "Estudio de grabación" } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,5 +23,6 @@ const description =
   <body>
     <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
