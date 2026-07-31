@@ -9,10 +9,7 @@ import { services } from "../data/services";
   <div class="services-grid">
     {
       services.map((service) => (
-        <ServiceCard
-          title={service.title}
-          image={`${import.meta.env.BASE_URL}images/${service.image}`}
-        />
+        <ServiceCard title={service.title} image={service.image} />
       ))
     }
   </div>
