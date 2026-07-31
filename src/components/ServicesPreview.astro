@@ -1,0 +1,59 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+import { services } from "../data/services";
+---
+
+<section class="services">
+  <h2 class="services-title">Nuestros servicios</h2>
+
+  <div class="services-grid">
+    {
+      services.map((service) => (
+        <ServiceCard title={service.title} image={service.image} />
+      ))
+    }
+  </div>
+
+  <a href="/servicios" class="services-btn">Ver todos los servicios</a>
+</section>
+
+<style>
+  .services {
+    height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1.5rem;
+    padding: 3rem 4rem;
+  }
+
+  .services-title {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    min-height: 0;
+  }
+
+  .services-btn {
+    display: inline-block;
+    justify-self: center;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    transition: color 0.2s;
+  }
+
+  .services-btn:hover {
+    background-color: #c9a84c;
+    color: #0a0a0a;
+  }
+</style>

@@ -12,5 +12,5 @@ body {
   font-family: "Quicksand", sans-serif;
   line-height: 1.6;
 
-  background-color: #0a0a0a;
+  background: linear-gradient(to bottom, #3b1f5c 0%, #1a0f2b 40%, #0a0a0a 100%);
 }
