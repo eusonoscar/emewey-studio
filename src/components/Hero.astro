@@ -1,0 +1,54 @@
+---
+import portada from "../assets/portada.jpg";
+import { Image } from "astro:assets";
+---
+
+<section class="hero">
+  <Image src={portada} alt="Emewey Studio" class="hero-img" />
+  <div class="hero-content">
+    <h3 class="hero-title">
+      Emewey <span class="hero-title-span">Studio</span>
+    </h3>
+    <h1 class="hero-subtitle">
+      Tu estudio de <br /> grabación profesional
+    </h1>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  .hero-title-span {
+    color: #d3ae49;
+  }
+
+  .hero-subtitle {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+</style>

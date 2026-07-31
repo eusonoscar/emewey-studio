@@ -1,14 +1,56 @@
 ---
-
+import logo from "../assets/emewey-black.png";
 ---
 
-<nav>
-  <a href="/" class="logo">Emewey Studio</a>
+<nav class="navbar">
+  <a href="/" class="logo">
+    <img src={logo.src} alt="Emewey Estudio" />
+  </a>
 
-  <ul>
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/servicios">Servicios</a></li>
-    <li><a href="/estudio">Estudio</a></li>
-    <li><a href="/contacto">Contacto</a></li>
+  <ul class="nav-links">
+    <li class="nav-item"><a href="/">Inicio</a></li>
+    <li class="nav-item"><a href="/servicios">Servicios</a></li>
+    <li class="nav-item"><a href="/estudio">Estudio</a></li>
+    <li class="nav-item"><a href="/contacto">Contacto</a></li>
   </ul>
 </nav>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    padding: 1.5rem 2rem;
+
+    z-index: 10;
+  }
+
+  .logo img {
+    height: 80px;
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2.5rem;
+  }
+
+  .nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  .nav-item a:hover {
+    color: #d3ae49;
+  }
+</style>
