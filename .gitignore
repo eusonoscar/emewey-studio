@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # vsCode
 .vscode/
+AGENTS.md
+CLAUDE.md
+
