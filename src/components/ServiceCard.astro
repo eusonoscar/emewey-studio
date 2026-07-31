@@ -46,4 +46,15 @@ const { title, image } = Astro.props;
     margin: 0;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   }
+
+  @media (max-width: 768px) {
+    .card {
+      height: 200px;
+      min-height: unset;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+    }
+  }
 </style>

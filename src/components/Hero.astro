@@ -61,4 +61,19 @@ import { Image } from "astro:assets";
     height: 200px;
     background: linear-gradient(to bottom, transparent, #3b1f5c);
   }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      top: 70%;
+      left: 15%;
+    }
+
+    .hero-title {
+      font-size: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+    }
+  }
 </style>
